@@ -41,6 +41,7 @@ const navigation = [
   { name: 'Gosti', href: '/owner/guests'},
   { name: 'Apartmani', href: '/owner/apartments'},
   { name: 'Dodaj Apartman', href: '/owner/add-apartment'},
+  {name: 'Ažuriraj apartman', href: '/owner/update-apartment'},
   { name: 'Profil', href:'/owner/profile'},
   { name: 'Odjava', href:'/',onLogout:true}
 ]

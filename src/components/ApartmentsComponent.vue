@@ -11,6 +11,7 @@
             </div>
             <div className='flex items-center justify-between mt-4'>
                 <p><span span className='text-xl text-gray-800'>{{ apartment.price }} €</span></p>
+                <p><span span className='text-xl text-gray-800'>{{ (apartment.price * 1.95583).toFixed(2) }} KM</span></p>
             </div>
         </div>
     </div>

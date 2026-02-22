@@ -8,6 +8,7 @@ import GuestsView from "../components/GuestsView.vue";
 import ApartmentList from "../components/ApartmentList.vue";
 import AddApartment from "../components/AddApartment.vue";
 import OwnerProfile from "../components/OwnerProfile.vue";
+import UpdateApartment from "../components/UpdateApartment.vue";
 
 const routes=[
     {
@@ -56,6 +57,11 @@ const routes=[
                 path:'/owner/profile',
                 name:'OwnerProfile',
                 component:OwnerProfile
+            },
+            {
+                path:'/owner/update-apartment',
+                name:'UpdateApartment',
+                component:UpdateApartment   
             }
         ]
     }

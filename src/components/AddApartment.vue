@@ -124,7 +124,8 @@
         try {
           const response=await axios.get('http://localhost:8000/api/addresses',{
             headers:{
-              Authorization: `Bearer ${localStorage.getItem('token')}`
+              Authorization: `Bearer ${localStorage.getItem('token')}`,
+              'Accept': 'application/json'
             }
           });
           this.addresses=response.data;

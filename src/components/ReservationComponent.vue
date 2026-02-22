@@ -73,9 +73,17 @@
 
                  <div class="mb-5">
                     <label for="total_price" class="mb-3 block text-base font-medium text-[#07074D]">
-                        Ukupna cijena
+                        Ukupna cijena u €
                     </label>
                     <input type="number" placeholder="Ukupna cijena" disabled id="total_price" v-model="newReservation.total_price"
+                        class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+                </div>
+
+                <div class="mb-5">
+                    <label for="priceIBAM" class="mb-3 block text-base font-medium text-[#07074D]">
+                        Ukupna cijena u BAM
+                    </label>
+                    <input type="number" placeholder="Ukupna cijena" disabled id="priceIBAM" v-model="priceIBAM"
                         class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
                 </div>
 
@@ -151,7 +159,9 @@
                     start_date:'',
                     end_date:'',
                     total_price:''
-                }
+                },
+                priceIBAM: ''
+
             }
         },
         methods:{
@@ -250,7 +260,7 @@
 
                 if (days <= 0) return 0;
 
-                return days * apartment.price;
+                return (days * apartment.price).toFixed(2);
 
 
 
@@ -263,6 +273,7 @@
         watch:{
             calculateTotalPrice(value){
                 this.newReservation.total_price=value;
+                this.priceIBAM=(value*1.96).toFixed(2);
             }
         }
     }

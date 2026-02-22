@@ -19,6 +19,7 @@
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-200">Dodaci</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-200">Broj gostiju</th>
                   <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-200">Cijena</th>
+                  <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-gray-200"></th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white dark:divide-white/10 dark:bg-gray-800/50">
@@ -30,6 +31,13 @@
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ apartment.amenities }}</td>
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ apartment.number_of_guests }}</td>
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ apartment.price }}</td>
+                  <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">
+                    <div class="flex items-center">
+                      <img @click="deleteApartment(apartment.id)" src="../assets/delete.svg" alt="" class="h-4 cursor-pointer">
+                    </div>
+                  </td>
+
+                  
                 </tr>
               </tbody>
             </table>
@@ -60,6 +68,20 @@
             }
           });
           this.apartments=response.data;
+        } catch (error) {
+          console.log('Greška',error);
+          alert('Greška na serveru');
+        }
+      },
+      async deleteApartment(id){
+        try {
+          await axios.delete(`http://localhost:8000/api/apartments/${id}`,{
+            headers:{
+              Authorization: `Bearer ${localStorage.getItem('token')}`,
+              'Accept': 'application/json'
+            }
+          });
+          this.getApartments();
         } catch (error) {
           console.log('Greška',error);
           alert('Greška na serveru');
