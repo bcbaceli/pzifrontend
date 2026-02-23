@@ -49,7 +49,7 @@
         methods:{
             async getApartments(){
                 try {
-                const response=await axios.get('http://localhost:8000/api/apartments',{
+                const response=await axios.get('/api/apartments',{
                     headers:{
                     Authorization: `Bearer ${localStorage.getItem('token')}`,
                     'Accept': 'application/json'
@@ -63,7 +63,7 @@
             },
             async updateApartment(){
                 try {
-                const response=await axios.put(`http://localhost:8000/api/apartments/${this.apartment.id}`,{
+                const response=await axios.put(`/api/apartments/${this.apartment.id}`,{
                  
                         name:this.apartment.name,
                         price:this.apartment.price

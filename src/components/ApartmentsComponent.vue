@@ -31,7 +31,7 @@
         methods:{
             async getApartments(){
                 try {
-                    const response=await axios.get('http://localhost:8000/api/apartments',{
+                    const response=await axios.get('/api/apartments',{
                         headers:{
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                             'Accept': 'application/json'

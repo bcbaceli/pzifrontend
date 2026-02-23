@@ -167,7 +167,7 @@
         methods:{
             async getUsers(){
                 try {
-                    const response=await axios.get('http://localhost:8000/api/users',{
+                    const response=await axios.get('/api/users',{
                         headers:{
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                             'Accept': 'application/json'
@@ -181,7 +181,7 @@
             },
             async getAparmtents(){
                 try {
-                    const response=await axios.get('http://localhost:8000/api/apartments',{
+                    const response=await axios.get('/api/apartments',{
                         headers:{
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                             'Accept': 'application/json'
@@ -195,7 +195,7 @@
             },
             async addReservation() {
                 try {
-                    const addressRes = await axios.post('http://localhost:8000/api/addresses', this.newAddress,{
+                    const addressRes = await axios.post('/api/addresses', this.newAddress,{
                         headers:{
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                             'Accept': 'application/json'
@@ -204,7 +204,7 @@
                     if (addressRes.status === 201) {
                     this.newGuest.address_id = addressRes.data.id;
 
-                    const guestRes = await axios.post('http://localhost:8000/api/guests', this.newGuest,{
+                    const guestRes = await axios.post('/api/guests', this.newGuest,{
                         headers:{
                             Authorization: `Bearer ${localStorage.getItem('token')}`,
                             'Accept': 'application/json'
@@ -213,7 +213,7 @@
                     if (guestRes.status === 201) {
                         this.newReservation.guest_id = guestRes.data.id;
 
-                        const reservationRes = await axios.post('http://localhost:8000/api/reservations', this.newReservation,{
+                        const reservationRes = await axios.post('/api/reservations', this.newReservation,{
                             headers:{
                                 Authorization: `Bearer ${localStorage.getItem('token')}`,
                                 'Accept': 'application/json'

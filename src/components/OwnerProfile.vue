@@ -71,7 +71,7 @@
     methods:{
       async getUsers(){
         try {
-          const response=await axios.get('http://localhost:8000/api/users',{
+          const response=await axios.get('/api/users',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'
@@ -85,7 +85,7 @@
       },
       async addOwner(){
         try {
-          const response=await axios.post('http://localhost:8000/api/owners',this.newOwner,{
+          const response=await axios.post('/api/owners',this.newOwner,{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'

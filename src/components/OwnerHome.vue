@@ -53,7 +53,7 @@
     methods:{
       async getReservations(){
         try {
-          const response=await axios.get('http://localhost:8000/api/reservations',{
+          const response=await axios.get('/api/reservations',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'
