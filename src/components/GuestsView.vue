@@ -53,7 +53,7 @@
     methods:{
       async getGuests(){
         try {
-          const response=await axios.get('/api/guests',{
+          const response=await axios.get('/backend/api/guests',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'

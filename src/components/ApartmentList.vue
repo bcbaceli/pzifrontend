@@ -61,7 +61,7 @@
     methods:{
       async getApartments(){
         try {
-          const response=await axios.get('/api/apartments',{
+          const response=await axios.get('/backend/api/apartments',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'
@@ -75,7 +75,7 @@
       },
       async deleteApartment(id){
         try {
-          await axios.delete(`/api/apartments/${id}`,{
+          await axios.delete(`/backend/api/apartments/${id}`,{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'

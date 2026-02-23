@@ -47,7 +47,7 @@
     methods:{
       async loginUser(){
         try {
-          const response=await axios.post('/api/login',{
+          const response=await axios.post('/backend/api/login',{
             email:this.email,
             password:this.password,
           });

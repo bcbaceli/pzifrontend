@@ -63,7 +63,7 @@
     methods:{
       async addUser(){
         try {
-          const response=await axios.post('/api/register',this.newUser)
+          const response=await axios.post('/backend/api/register',this.newUser)
           if(response.status===200){
             this.newUser={
               name:'',

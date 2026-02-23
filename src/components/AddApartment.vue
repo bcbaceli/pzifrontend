@@ -122,7 +122,7 @@
     methods:{
       async getAddresses(){
         try {
-          const response=await axios.get('/api/addresses',{
+          const response=await axios.get('/backend/api/addresses',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'
@@ -136,7 +136,7 @@
       },
       async getOwners(){
         try {
-          const response=await axios.get('/api/owners',{
+          const response=await axios.get('/backend/api/owners',{
             headers:{
               Authorization: `Bearer ${localStorage.getItem('token')}`,
               'Accept': 'application/json'
@@ -160,7 +160,7 @@
           formData.append('price', this.newApartment.price);
           formData.append('owner_id', this.newApartment.owner_id);
 
-          const response = await axios.post('/api/apartments', formData, {
+          const response = await axios.post('/backend/api/apartments', formData, {
             headers: { 'Content-Type': 'multipart/form-data',Authorization: `Bearer ${localStorage.getItem('token')}`,'Accept': 'application/json' }
           });
 
