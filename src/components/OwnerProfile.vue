@@ -80,7 +80,7 @@
           this.users=response.data;
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       },
       async addOwner(){
@@ -105,7 +105,7 @@
           }
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       }
     },

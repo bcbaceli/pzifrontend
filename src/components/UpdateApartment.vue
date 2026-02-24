@@ -58,7 +58,7 @@
                 this.apartments=response.data;
                 } catch (error) {
                 console.log('Greška',error);
-                alert('Greška na serveru');
+                
                 }
             },
             async updateApartment(){
@@ -78,7 +78,7 @@
                 }  
                 } catch (error) {
                 console.log('Greška',error);
-                alert('Greška na serveru');   
+                   
                 }
             }
         },

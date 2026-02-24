@@ -70,7 +70,7 @@
           }
         } catch (error) {
           console.error(error);
-          alert('Greška prilikom prijave');
+          
         }
       }
     }

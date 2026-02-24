@@ -62,7 +62,7 @@
           this.reservations=response.data;
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       }
     },

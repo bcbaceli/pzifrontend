@@ -176,7 +176,7 @@
                     this.users=response.data
                 } catch (error) {
                     console.log('Greška',error);
-                    alert('Greška na serveru');
+                    
                 }
             },
             async getAparmtents(){
@@ -190,7 +190,7 @@
                     this.apartments=response.data
                 } catch (error) {
                     console.log('Greška',error);
-                    alert('Greška na serveru');
+                    
                 }
             },
             async addReservation() {
@@ -237,7 +237,7 @@
                     }
                 } catch (error) {
                     console.error(error);
-                    alert('Greška na serveru');
+                    
                 }
             }
 

@@ -70,7 +70,7 @@
           this.apartments=response.data;
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       },
       async deleteApartment(id){
@@ -84,7 +84,7 @@
           this.getApartments();
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       }
     },

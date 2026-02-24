@@ -131,7 +131,7 @@
           this.addresses=response.data;
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       },
       async getOwners(){
@@ -145,7 +145,7 @@
           this.owners=response.data;
         } catch (error) {
           console.log('Greška',error);
-          alert('Greška na serveru');
+          
         }
       },
       async addApartment() {
@@ -173,7 +173,7 @@
 
         } catch (error) {
           console.log('Greška', error);
-          alert('Greška na serveru');
+          
         }
       },
 
