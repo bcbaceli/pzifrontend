@@ -29,7 +29,7 @@
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ reservation.start_date }}</td>
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ reservation.end_date }}</td>
                   <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ reservation.number_of_guests }}</td>
-                  <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ reservation.total_price }}</td>
+                  <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400">{{ reservation.total_price }}€</td>
                 </tr>
               </tbody>
             </table>
